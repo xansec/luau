@@ -1,0 +1,7 @@
+image: ghcr.io/xansec/luau
+project: luau
+target: fuzz-prototest
+
+cmds:
+  - cmd: /fuzz-prototest
+    libfuzzer: true

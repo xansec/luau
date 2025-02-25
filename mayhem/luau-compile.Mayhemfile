@@ -1,0 +1,7 @@
+image: ghcr.io/xansec/luau
+project: luau
+target: luau-compile
+advanced_triage: true
+
+cmds:
+  - cmd: /luau-compile --mode binary @@

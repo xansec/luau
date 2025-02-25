@@ -10,6 +10,7 @@ cmake_policy(SET CMP0054 NEW)
 cmake_policy(SET CMP0058 NEW)
 cmake_policy(SET CMP0074 NEW)
 cmake_policy(SET CMP0077 NEW)
+cmake_policy(SET CMP0079 NEW)
 cmake_policy(SET CMP0091 NEW)
 
 if(NOT CMAKE_CXX_COMPILER_ID STREQUAL "Clang")
@@ -17,8 +18,8 @@ if(NOT CMAKE_CXX_COMPILER_ID STREQUAL "Clang")
     return()
 endif()
 
-if(NOT CMAKE_OSX_ARCHITECTURES STREQUAL "x86_64")
-    message(WARNING "Building the Luau fuzzer for ARM64 is currently unsupported.")
+if(${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
+    message(WARNING "Building the Luau fuzzer for Apple M1 is currently unsupported.")
     return()
 endif()
 
