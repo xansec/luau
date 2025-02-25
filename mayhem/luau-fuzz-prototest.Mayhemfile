@@ -1,5 +1,6 @@
 image: ghcr.io/xansec/luau
 project: luau
+duration: 1200
 target: fuzz-prototest
 
 cmds:

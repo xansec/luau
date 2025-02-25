@@ -1,6 +1,7 @@
 image: ghcr.io/xansec/luau
 project: luau
 target: luau-bytecode
+duration: 1200
 advanced_triage: true
 
 cmds:
