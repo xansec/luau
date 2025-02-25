@@ -23,3 +23,5 @@ COPY --from=builder /luau/build/luau-compile /
 # COPY --from=builder /luau/build/luau-reduce /
 COPY --from=builder /luau/build/fuzz/fuzz-proto /
 COPY --from=builder /luau/build/fuzz/fuzz-prototest /
+
+COPY --from=builder /luau/tests/conformance /testsuite
