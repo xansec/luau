@@ -5,4 +5,5 @@ duration: 1200
 advanced_triage: true
 
 cmds:
-  - cmd: /luau-analyze --mode omitted @@
+  - cmd: /luau-analyze @@
+    max_length: 16384

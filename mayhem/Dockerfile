@@ -15,6 +15,9 @@ WORKDIR /luau/build
 RUN make -j8
 
 FROM ubuntu
+
+RUN apt update -y && DEBIAN_FRONTEND=noninteractive apt install -y libc6-dbg
+
 COPY --from=builder /luau/build/luau /
 COPY --from=builder /luau/build/luau-analyze /
 COPY --from=builder /luau/build/luau-ast /

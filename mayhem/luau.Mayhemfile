@@ -6,3 +6,4 @@ advanced_triage: true
 
 cmds:
   - cmd: /luau @@
+    max_length: 16384
