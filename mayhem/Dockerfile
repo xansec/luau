@@ -1,4 +1,4 @@
-FROM ubuntu AS builder
+FROM ubuntu:22.04 AS builder
 
 RUN apt update -y && DEBIAN_FRONTEND=noninteractive apt install -y build-essential software-properties-common lsb-release clang lld wget git
 RUN apt clean all
@@ -14,7 +14,7 @@ RUN CC=clang CXX=clang++ LDFLAGS=-fuse-ld=lld cmake -DCMAKE_CXX_FLAGS=-std=c++17
 WORKDIR /luau/build
 RUN make -j8
 
-FROM ubuntu
+FROM ubuntu:22.04
 
 RUN apt update -y && DEBIAN_FRONTEND=noninteractive apt install -y libc6-dbg
 
